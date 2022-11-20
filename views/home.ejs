@@ -1,0 +1,18 @@
+  
+  <%- include('partials/header') %> 
+    <h1>Home</h1>
+    <p style="font-size:large ;"> <%= homepageContent  %>  </p>
+    <div class="composing">
+       <a class="composetag" href="/compose">Compose</a>
+    </div>
+   
+   
+   <% posts.forEach(function(element){ %>  
+    
+   <h2> <%= element.title %> </h2>
+   <p>  <%= (element.bodytile).substring(0,100) %>... <a href="/posts/<%=element.title%> ">Read more</a> </p>
+
+  <% }) %>   
+
+
+  <%- include('partials/footer') %> 
